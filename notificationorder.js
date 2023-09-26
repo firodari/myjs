@@ -1,18 +1,18 @@
-// قائمة بالرسائل العشوائية
+// Random Messages List
 const messages = [
-    "رسالة عشوائية رقم 1",
-    "رسالة عشوائية رقم 2",
-    "رسالة عشوائية رقم 3",
-    "رسالة عشوائية رقم 4",
-    "رسالة عشوائية رقم 5"
+    "Random Message 1",
+    "Random Message 2",
+    "Random Message 3",
+    "Random Message 4",
+    "Random Message 5"
 ];
 
-// انتظر حتى يتم تحميل الصفحة بالكامل
+// Wait for the page to fully load
 document.addEventListener("DOMContentLoaded", function () {
-    // انشئ متغيراً للعنصر الذي يحتوي على الرسالة
+    // Create a variable for the element that contains the message
     var messageElement = document.querySelector(".bottom-message");
 
-    // عرض الرسائل بشكل دوري
+    // Display messages periodically
     let currentIndex = 0;
     setInterval(function () {
         if (currentIndex === messages.length) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         messageElement.classList.add("message-visible");
         setTimeout(function () {
             messageElement.classList.remove("message-visible");
-        }, 3000); // عرض الرسالة لمدة 4 ثواني
+        }, 3000); // Display the message for 3 seconds
         currentIndex++;
-    }, 4000); // تبديل الرسائل كل 6 ثواني
+    }, 4000); // Switch messages every 4 seconds
 });
